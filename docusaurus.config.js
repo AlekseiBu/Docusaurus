@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Tokeon FAQ',
-  tagline: '...',
+  tagline: '  ',
   favicon: 'img/fav.ico',
 
   // Set the production url of your site here
@@ -44,12 +44,13 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          routeBasePath: '/', //указываем стартовую страницу
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+
 
         },
         blog: {
-          showReadingTime: true,
+          showReadingTime: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -65,12 +66,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      hideLastUpdate: true, // Скрыть кнопку "Редактировать эту страницу"
       // Replace with your project's social card
-      initialColorMode: { route: '/docs' },       //определяем домашнюю страницу
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Tokeon FAQ',
+          title: '  ',
         logo: {
           alt: 'My Site Logo',
           src: 'img/log.svg',
@@ -80,15 +79,15 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Инвесторы',
+            label: 'Для инвесторов',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'emitentSidebar',
             position: 'left',
-            label: 'Эмитенты',
+            label: 'Для эмитентов',
           },
-         // {to: '/blog', label: 'Блог>', position: 'left'},
+         // {to: '/blog', label: 'Блог>', position: 'left'},    //раздел блог
 
         ],
       },
@@ -101,11 +100,11 @@ const config = {
             items: [
               {
                 label: 'Telegramm',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://tokeon_bot.t.me/',
               },
               {
                 label: 'Email',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'mailto:info@tokeon.ru',
               },
 
             ],
