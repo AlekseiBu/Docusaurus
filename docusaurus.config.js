@@ -66,6 +66,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Отключаем автооглавление
+      tableOfContents: {
+        minHeadingLevel: 5,
+        maxHeadingLevel: 5,
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -75,6 +80,12 @@ const config = {
           src: 'img/log.svg',
         },
         items: [
+            /* включаем версионность
+          {
+            type: 'docsVersionDropdown',
+          },
+
+             */
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
@@ -111,7 +122,7 @@ const config = {
           },
 
         ],
-        copyright: ` ${new Date().getFullYear()} Tokeon`,
+        copyright: ` ${new Date().getFullYear()} Токеон`,
       },
       prism: {
         theme: prismThemes.github,
