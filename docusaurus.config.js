@@ -66,21 +66,25 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      customCss: [   // подключаем класс из css для ресайза изображений
+        // путь до css для ресайза изображений
+        require.resolve('./src/css/custom.css'),
+      ],
       // Отключаем автооглавление
       tableOfContents: {
         minHeadingLevel: 5,
         maxHeadingLevel: 5,
       },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: '  ',
       navbar: {
           title: '  ',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/log.svg',
+          src: 'img/logo3.svg',
         },
         items: [
-            /* включаем версионность
+            /* выпадающий список версионности
           {
             type: 'docsVersionDropdown',
           },
@@ -90,28 +94,29 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Для инвесторов',
+            label: 'Часто задаваемые вопросы',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'emitentSidebar',
+            sidebarId: 'instructionsSidebar',
             position: 'left',
-            label: 'Для эмитентов',
+            label: 'Пользовательские инструкции',
           },
-         // {to: '/blog', label: 'Блог>', position: 'left'},    //раздел блог
+         // {to: '/blog', label: 'Блог>', position: 'left'},    //раздел блог отключен
 
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
 
           {
-            title: 'Контакты',
+            title: '  ',
             items: [
               {
-                label: 'Telegramm',
+                label: 'Telegram',
                 href: 'https://tokeon_bot.t.me/',
+                icon: 'telegram',
               },
               {
                 label: 'Email',
@@ -122,7 +127,7 @@ const config = {
           },
 
         ],
-        copyright: ` ${new Date().getFullYear()} Токеон`,
+        copyright: ` ${new Date().getFullYear()} ООО "Токены"`,
       },
       prism: {
         theme: prismThemes.github,

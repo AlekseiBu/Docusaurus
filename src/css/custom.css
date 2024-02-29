@@ -7,9 +7,17 @@
 /* You can override the default Infima variables here. */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-.custom-image {
-  width: 450px;
+
+/* Устанавливаем максимальную ширину для изображений */
+img {
+  max-width: 450px;
   height: auto;
+}
+
+/* Размер логотипа */
+.navbar__logo img {
+  height: 180%;
+  margin-top: -10px;
 }
 
 /* Убираем прямую ссылку при наведении на заголовок */
@@ -27,6 +35,12 @@
   display: none;
 }
 
+/* Сделать футер прозрачным */
+.footer {
+  background-color: rgba(255, 255, 255, 0);
+  border-top: 1px solid #ccc;
+}
+
 :root {
   --ifm-font-family-base: 'Open Sans';
   --ifm-color-primary: #ff6725;
@@ -36,7 +50,7 @@
   --ifm-color-primary-light: #ff7b42;
   --ifm-color-primary-lighter: #ff8651;
   --ifm-color-primary-lightest: #ffa47d;
-  --ifm-code-font-size: 95%;
+  --ifm-code-font-size: 85%;
   --docusaurus-highlighted-code-line-bg: rgba(255, 103, 37, 0.57);
 }
 
